@@ -2,7 +2,8 @@
 
 using namespace std;
 
-//Write function prototype here
+unsigned int gcd(int,int);
+
 
 int main(){
 	cout << gcd(25,15) << "\n";
@@ -15,9 +16,30 @@ int main(){
 	return 0;
 }
 
-//Write function definition here
-/*
-??? gcd(???){
+unsigned int gcd(int x, int y){
 
+	int sum;
+
+	if(y>x){
+
+		if(y%x==0)	return x;
+
+		else {
+
+			sum = gcd(x,y%x);
+			return sum;
+		}
+	}
+	else{
+		
+		if(x%y==0)	return y;
+
+		else {
+
+			sum = gcd(y,x%y);
+			return sum;
+	}
+	}
+
+	
 }
-*/
